@@ -1,0 +1,9 @@
+{
+	"title"		:	"Gas Systems 2 for LS3",
+	"type"		:	"tool",
+	"tags"		:	[ "fun", "build" ],
+	"ignore"	:
+	[
+		".git/*"
+	]
+}

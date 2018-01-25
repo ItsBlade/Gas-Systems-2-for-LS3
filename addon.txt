@@ -1,7 +1,0 @@
-// Extracted with MulleDK19's GMAD Extractor
-"AddonInfo"
-{
-	"name" "Gas Systems 2 For LS3"
-	"author_name" "Syncaidius"
-	"info" " { 	"description": "Description", 	"type": "tool", 	"tags":  	[ 		"fun", 		"build" 	] }"
-}
