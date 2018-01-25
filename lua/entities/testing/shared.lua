@@ -1,4 +1,4 @@
-local ENT = scripted_ents.Register( ENT, "testing" )
+local ENT = {}
 
 ENT.Type 		= "anim"
 ENT.Base 		= "base_rd3_entity"
@@ -9,3 +9,5 @@ ENT.PrintName	    = "Large Natural Gas Tank"
 ENT.Author		    = "Syncaidius"
 ENT.Instructions    = ""
 ENT.Contact		    = "syncaidius@googlemail.com"
+
+scripted_ents.Register( ENT, "testing" )
