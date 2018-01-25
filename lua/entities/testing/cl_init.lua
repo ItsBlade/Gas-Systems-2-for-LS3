@@ -1,4 +1,4 @@
-ENT = {}
+local ENT = {}
 
 ENT.Spawnable			= false
 ENT.AdminSpawnable		= false
