@@ -1,4 +1,4 @@
-local ENT = scripted_ents.Register( ENT, "testing" )
+local ENT = {}
 
 function ENT:Initialize()
 	self.Entity:SetModel( "models/syncaidius/gas_tank_huge.mdl" )
@@ -149,3 +149,5 @@ end
 function ENT:PostEntityPaste( Player, Ent, CreatedEntities )
     self.BaseClass.PostEntityPaste(self, Player, Ent, CreatedEntities )
 end
+
+scripted_ents.Register( ENT, "testing" )
