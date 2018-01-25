@@ -1,5 +1,11 @@
 local ENT = {}
 
+concommand.Add("spawn", function(ply)		
+	local ent = ents.Create( "testing" )	
+		ent:SetPos(ply:GetPos())
+		ent:Spawn()
+end)
+
 function ENT:Initialize()
 	self.Entity:SetModel( "models/syncaidius/gas_tank_huge.mdl" )
 	self:SetSkin(4)
