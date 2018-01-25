@@ -1,8 +1,4 @@
 
-AddCSLuaFile( "cl_init.lua" )
-AddCSLuaFile( "shared.lua" )
-
-include('shared.lua')
 
 if not (WireMod == nil) then
 	ENT.WireDebugName = "Adv. Gas Thruster"
