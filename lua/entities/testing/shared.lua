@@ -8,3 +8,4 @@ ENT.Author		    = "Syncaidius"
 ENT.Instructions    = ""
 ENT.Contact		    = "syncaidius@googlemail.com"
 
+scripted_ents.Register( ENT, "testing" )
