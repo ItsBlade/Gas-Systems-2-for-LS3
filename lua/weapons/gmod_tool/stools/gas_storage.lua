@@ -24,10 +24,8 @@ if not CAF or not CAF.GetAddon("Resource Distribution") then Error("Please Insta
 if not CAF or not CAF.GetAddon("Life Support") then return end
 
 if( SERVER ) then
-	CreateConVar("sbox_maxgas_storage", 24)
 	
 	function Makegas_storage( ply, ang, pos, stortype, model, frozen )
-		if ( !ply:CheckLimit( "gas_storage" ) ) then return nil end
 		
 		--Create gas storage
 		local ent = ents.Create( stortype )
@@ -51,8 +49,6 @@ if( SERVER ) then
 				ply:AddFrozenPhysicsObject( ent, phys )
 			end
 		end
-		
-		ply:AddCount("gas_storage", ent)
 		
 		return ent
 	end
@@ -78,7 +74,7 @@ local gas_stor_models = {
 		{ "#Medium Natural Gas Tank", "models/syncaidius/gas_tank_large.mdl", "gas_lstore" },
 		{ "#Small Natural Gas Tank", "models/syncaidius/gas_tank_small.mdl", "gas_sstore" },
 		{ "#Large Processed Gas Tank", "models/syncaidius/lprocstore.mdl", "gas_lproctank" },
-    { "#Medium Processed Gas Tank", "models/syncaidius/mprocstore.mdl", "gas_mproctank" },
+		{ "#Medium Processed Gas Tank", "models/syncaidius/mprocstore.mdl", "gas_mproctank" },
 		{ "#Small Processed Gas Tank", "models/syncaidius/sprocstore.mdl", "gas_sproctank" },
 		{ "#Large Methane Tank", "models/syncaidius/gas_tank_huge.mdl", "gas_hmethstore" },
 		{ "#Medium Methane Tank", "models/syncaidius/gas_tank_large.mdl", "gas_lmethstore" },
@@ -93,4 +89,4 @@ local gas_stor_models = {
 		{ "#Medium Tritium Tank", "models/syncaidius/gas_tank_large.mdl", "gas_ltritstore" },
 		{ "#Small Tritium Tank", "models/syncaidius/gas_tank_small.mdl", "gas_stritstore" }
 }
-CAF_ToolRegister( TOOL, gas_stor_models, Makegas_storage,"gas_storage",24)
+CAF_ToolRegister( TOOL, gas_stor_models, Makegas_storage,"gas_storage", 0 )

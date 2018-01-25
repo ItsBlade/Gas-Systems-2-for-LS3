@@ -24,10 +24,8 @@ if not CAF or not CAF.GetAddon("Resource Distribution") then Error("Please Insta
 if not CAF or not CAF.GetAddon("Life Support") then return end
 
 if( SERVER ) then
-	CreateConVar("sbox_maxgas_generator", 24)
 	
 	function Makegas_generator( ply, ang, pos, gentype, model, frozen )
-		if ( !ply:CheckLimit( "gas_generator" ) ) then return nil end
 		
 		--Create generator
 		local ent = ents.Create( gentype )
@@ -51,8 +49,6 @@ if( SERVER ) then
 				ply:AddFrozenPhysicsObject( ent, phys )
 			end
 		end
-		
-		ply:AddCount("gas_generator", ent)
 		
 		return ent
 	end
@@ -91,4 +87,4 @@ local gas_gen_models = {
 	{"Deuterium Inverter", "models/syncaidius/gas_inverter.mdl", "gas_deutinverter"},
 	{"Methane Rehydrator", "models/syncaidius/gas_inverter.mdl", "gas_rehydrator"}
 }
-CAF_ToolRegister( TOOL, gas_gen_models, Makegas_generator,"gas_generator",24)
+CAF_ToolRegister( TOOL, gas_gen_models, Makegas_generator,"gas_generator", 0 )
