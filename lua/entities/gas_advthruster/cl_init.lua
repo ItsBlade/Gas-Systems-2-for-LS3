@@ -1,6 +1,3 @@
-
-include('shared.lua')
-
 CreateConVar( "cl_drawthrusterseffects", "1" )
 
 local matHeatWave		= Material( "sprites/heatwave" )
