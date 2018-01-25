@@ -1,5 +1,7 @@
 local ENT = {}
 
+ENT.Test = true
+
 function ENT:Initialize()
 	self.Entity:SetModel( "models/syncaidius/gas_tank_huge.mdl" )
 	self:SetSkin(4)
