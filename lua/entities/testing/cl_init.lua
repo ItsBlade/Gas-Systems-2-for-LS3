@@ -1,4 +1,4 @@
-local ENT = scripted_ents.Register( ENT, "testing" )
+ENT = {}
 
 ENT.Spawnable			= false
 ENT.AdminSpawnable		= false
