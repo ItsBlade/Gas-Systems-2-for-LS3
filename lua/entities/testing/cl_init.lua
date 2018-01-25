@@ -1,5 +1,3 @@
-AddCSLuaFile()
-
 ENT = {}
 
 ENT.Spawnable			= false
