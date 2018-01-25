@@ -63,8 +63,9 @@ function ENT:TriggerInput(iname, value)
 	if (iname == "Multiplier") then
 		if (value > 1) then
 			self.multiply = value
-			if (self.multiply > 5) then
-				self.multiply = 5
+			local MaxMulti = GetConVar( "GASSYS_MaxMultiplier" ):GetInt()
+			if self.multiply > MaxMulti then
+				self.multiply = MaxMulti
 			end
 		else
 			self.multiply = 1

@@ -187,7 +187,7 @@ if (SERVER) then
 			}
 		
 		table.Merge(gas_thruster:GetTable(), ttable )
-		
+		``
 		pl:AddCount( "gas_thrusters", gas_thruster )
 		
 		numpad.OnDown(pl, key, "gas_advthruster_on", gas_thruster, 1)
@@ -205,8 +205,7 @@ function TOOL:UpdateGhostGasThruster( ent, player )
 	if ( !ent ) then return end
 	if ( !ent:IsValid() ) then return end
 
-	local tr 	= utilx.GetPlayerTrace( player, player:GetCursorAimVector() )
-	local trace 	= util.TraceLine( tr )
+	local trace = player:GetEyeTrace()
 	if (!trace.Hit) then return end
 	
 	if (trace.Entity && trace.Entity:GetClass() == "gas_advthruster" || trace.Entity:IsPlayer()) then
