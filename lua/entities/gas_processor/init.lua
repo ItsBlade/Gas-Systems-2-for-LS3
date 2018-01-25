@@ -7,7 +7,7 @@ util.PrecacheSound( "common/warning.wav" )
 include('shared.lua')
 
 function ENT:Initialize()
-	self.Entity:SetModel( "models/props_interiors/VendingMachineSoda01a.mdl" )
+	self.Entity:SetModel( "models/syncaidius/gas_processor.mdl" )
 	self.BaseClass.Initialize(self)
 	
     local phys = self.Entity:GetPhysicsObject()
