@@ -2,6 +2,6 @@
 "AddonInfo"
 {
 	"name" "Gas Systems 2 For LS3"
-	"author_name" "Author Name"
+	"author_name" "Syncaidius"
 	"info" " { 	"description": "Description", 	"type": "tool", 	"tags":  	[ 		"fun", 		"build" 	] }"
 }
