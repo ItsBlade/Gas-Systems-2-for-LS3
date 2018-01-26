@@ -187,9 +187,7 @@ if (SERVER) then
 			}
 		
 		table.Merge(gas_thruster:GetTable(), ttable )
-		``
-		pl:AddCount( "gas_thrusters", gas_thruster )
-		
+
 		numpad.OnDown(pl, key, "gas_advthruster_on", gas_thruster, 1)
 		numpad.OnUp(pl, key, "gas_advthruster_off", gas_thruster, 1)
 
