@@ -141,7 +141,7 @@ function TOOL:LeftClick( trace )
 	local min = gas_thruster:OBBMins()
 	gas_thruster:SetPos( trace.HitPos - trace.HitNormal * min.z )
 	
-	// Don't weld to world
+	--Don't weld to world
 	local const = WireLib.Weld(gas_thruster, trace.Entity, trace.PhysicsBone, true, nocollide)
 
 	undo.Create("GasThruster")
